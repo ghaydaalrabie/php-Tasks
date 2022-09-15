@@ -28,6 +28,8 @@ echo "<br>";
 echo "<br>";
 
 
+
+
 // Solution number 2 :
 // $num = 13;
 // $count = 0;
@@ -75,7 +77,7 @@ function check_lowercase_string($string)
 }
 
 $string = 'Hi! I am a ghayda';
-var_dump(check_lowercase_string ($string)) ;
+var_dump(check_lowercase_string($string));
 echo "<br>";
 var_dump(check_lowercase_string('ghayda'));
 echo "<br>";
@@ -97,7 +99,7 @@ function swapValues($x, $y)
     echo "<br>";
     echo "y=" . $y = $z;
 }
-echo "Q4= " ;
+echo "Q4= ";
 
 echo "<br>";
 
@@ -126,7 +128,7 @@ function armstrongCheck($number)
     $x = $number;
     while ($x != 0) {
         $num = $x % 10;
-        $sum = $sum + $num * $num * $num ;
+        $sum = $sum + $num * $num * $num;
         $x = $x / 10;
     }
 
@@ -191,17 +193,16 @@ echo "<br>";
 //The array_unique() function removes duplicate values from an array.
 //array_unique(array, sorttype)
 
-$arr = [1, 2, 4, 2, 5];
+$arr = [105 , 93 , 1024 ,93 ,210 , 105];
 function removeDuplicate($arr)
 {
-    $arr = array(1, 2, 2, 3);
+    $arr = array(1, 2, 2, 3) ;
     $array = array_unique($arr);
     echo $array;
 }
 
 
-$data = [2, 4, 7, 4, 8, 4];
-echo print_r(array_unique($data));
+echo print_r(array_unique($arr));
 
 
 
@@ -316,7 +317,7 @@ function getSum($fNum, $sNum)
 {
     if ($fNum == $sNum) {
         $sum = ($fNum + $sNum) * 3;
-        echo "Q3=".$sum;
+        echo "Q3=" . $sum;
     } else {
         echo "The Numbers are not have same values ";
     }
@@ -567,8 +568,10 @@ echo "<br>" . "<br>";
 
 
 
+
 $marks = array(60, 86, 95, 63, 55, 74, 79, 62, 50);
 $average = (array_sum($marks) / count($marks));
+
 if ($average < 100 && $average > 90) {
     echo "Your garde is A";
 }
@@ -584,3 +587,46 @@ if ($average < 70 && $average > 60) {
 if ($average < 60) {
     echo "Your garde is F";
 }
+
+
+
+
+
+
+
+
+
+
+// function grade1(array $values)
+// {
+//     $avg = array_sum($values) / count($values);
+//     // echo $avg;
+
+//     switch ($avg > 0) {
+
+//         case $avg >= 90 && $avg <= 100:
+
+//             echo "A";
+//             break;
+
+//         case  $avg >= 80 && $avg <= 89:
+//             echo "B";
+
+//             break;
+
+//         case $avg >= 70 && $avg <= 79:
+
+//             echo "C";
+
+//             break;
+
+//         case  $avg >= 60 && $avg <= 69:
+
+//             echo "D";
+//             break;
+//         case  $avg >= 0 && $avg <= 59:
+
+//             echo "F";
+//     }
+// }
+// grade1([90, 80, 88, 85, 86, 90, 100]);
