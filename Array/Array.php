@@ -408,19 +408,54 @@ echo "<br>" . "<br>" . "<br>";
 
 
 
-function lowInt($arr)
-{
+// function lowInt($arr)
+// {
 
-    $minV = 0;
-    for ($i = 0; $i < count($arr); $i++) {
-        if ($i > 0) {
-            if ($minV > $arr[$i]) {
-                $minV = $arr[$i];
-            }
-        }
-        $minV = $arr[$i];
+//     $minV = 0;
+//     for ($i = 0; $i < count($arr); $i++) {
+//         if ($i > 0) {
+//             if ($minV > $arr[$i]) {
+//                 $minV = $arr[$i];
+//             }
+//         }
+//         $minV = $arr[$i];
+//     }
+//     return $minV;
+// }
+// $m = array(1, 0, 1, 12, 1);
+// echo lowInt($m);
+
+// echo "<br>";
+
+
+
+//Extra
+
+
+$length = 0;
+$longest = [];
+$shortest = [];
+
+
+$words =  array("ghayda", "yes", "No", "word", "O", "will" );
+
+$lengthShort = strlen($words[0]);
+foreach ($words as $element) {
+    $currentLength = strlen($element);
+    if ($currentLength > $length) {
+        $longest = [$element];
+        $length = $currentLength;
+
+    } else if ($currentLength == $length) {
+        $longest[] = $element;
     }
-    return $minV;
-}
-$m = array(1, 0, 1, 12, 1);
-echo lowInt($m);
+    if ($currentLength < $lengthShort) {
+        $lengthShort = $currentLength;
+        $shortest = [$element];
+    }
+} 
+print_r($longest);
+echo "<br>";
+print_r($shortest);
+
+echo "<br>";
